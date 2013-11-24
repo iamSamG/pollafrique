@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'SEGOEUIL';
+    
+    	src: url('http://fontsforweb.com/public/fonts/1409/SEGOEUIL.eot');
+	src: local('SEGOEUIL'), url('http://fontsforweb.com/public/fonts/1409/SEGOEUIL.ttf') format('truetype');
+    }
+body.cke_show_borders p {
+	font-family: 'SEGOEUIL';
+    font-size: 30px;
+}
+.fontsforweb_fontid_1409 {
+	font-family: 'SEGOEUIL' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
