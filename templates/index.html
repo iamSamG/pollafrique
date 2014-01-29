@@ -10,7 +10,7 @@
     <script src="js/bootstrap.min.js"></script>
     
   </head>
-  <body>
+  <body style=" background-color:#ddd;">
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container" >
@@ -42,13 +42,20 @@
 
     <form method="POST" action="/"  class="form">
     <div class="input-group">
-      <input type="text" class="form-control" name = "participate" placeholder="Get started with your phone number...">
+      <input type="text" class="form-control" id= "participate_btn" name = "participate" placeholder="Get started with your phone number..." required>
       <span class="input-group-btn" >
-        <input class="btn btn-success" type="submit" value = "Try it for Free!"></input>
+        <input class="btn btn-success" id="success_btn" type="submit" value = "Try it for Free!" data-complete-text="finished!"></input>
         <div class="success_message"></div>
       </span>
 
-    </div><!-- /input-group -->
+    </div>
+    <div class="alert alert-success" id="success_msg" style="display:none;">
+    <!-- <a class="close" href="#" aria-hidden="true">×</a> -->
+    <span>You've successfully registered your number! We'll keep in touch</span>
+  </div>
+  
+
+    <!-- /input-group -->
 
   </form>
   </div><!-- /.col-lg-6 -->
@@ -60,32 +67,82 @@
       
       <!-- <p><em>PollAfrique</em> offers you the opportunity</br> to participate in paid surveys via SMS.</p> -->
     </div>
-    
-      <div class="footer">
+    <div class="row" style="margin-left:5%; margin-bottom:5%;">
+        <div class="col-lg-4">
+
+          
+
+          <h2>Create SMS Surveys</h2>
+                    <p><em>PollAfrique</em> allows you to conduct primary research in three simple steps: </br>
+                     <p>
+                       &bull;&nbsp;&nbsp;Sign up as a researcher</br>
+                       &bull;&nbsp;&nbsp;Create quick surveys</br> 
+                       &bull;&nbsp;&nbsp;Filter your target on specific criteria and send
+                     </p>
+                   </p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Take SMS Surveys</h2>
+                  <p><em>PollAfrique</em> allows you to participate in surveys:</br>
+                   <p>
+                    &bull;&nbsp;&nbsp;Create a respondent account</br>
+                    &bull;&nbsp;&nbsp;Activate profile sent via SMS</br> 
+                    &bull;&nbsp;&nbsp;Start taking incentivized surveys
+                  </p>
+                </p>
+          <!-- <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p> -->
+       </div>
+        <div class="col-lg-4">
+          <h2>Product Offerings</h2>
+          <p><em>PollAfrique</em> facilitates value-added research with:</br>
+                   <p>
+                    • Cost-effective surveys</br>
+• Relevant target selection</br>
+• Improved response rate</br>
+• Detailed real-time analytics</br>
+• Dynamically generated reports
+
+                  </p>
+                </p>
+        </div>
+      </div>
   
-<div class="">
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
           <ul class="nav navbar-nav" >
             <li class=""><a href="#" style="color:#ffffff;">&copy; 2013 PollAfrique</a></li>
             <li><a href="#privacy" style="color:#ffffff;">Privacy</a></li>
             <li><a href="#terms" style="color:#ffffff;">Terms Of Use</a></li>      
           </ul>
           
-          <ul class="nav navbar-nav navbar-right" style="margin-top:1.2%; margin-right:3%;">
+          <ul class="" style="margin-top:1.2%; margin-right:3%; float:right;">
             
             <li>
-              <img src="images/facebook-square.gif" alt="">
-              <img src="images/twitter-square.gif" alt="">
+              <a href="http://www.facebook.com/pollafrique"><img src="images/facebook-square.gif"  alt=""></a>
+               <a href="http://www.twitter.com/poll_afrique"><img src="images/twitter-square.gif" alt=""></a>
               <img src="images/linkedin-square.gif" alt="">
-              <img src="images/googleplus-square.gif" alt="">
             </li>
            
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class=""><a href="#follow"  style="color:#ffffff;">Follow Us</b>&nbsp;</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-</div>
+          
+        <!--/.nav-collapse -->
+</nav>
 
     
   </body>
+
+  <script type="text/javascript">
+ 
+$( "#success_btn" ).click(function() {
+  var participate = $('#participate_btn').value;
+  if (participate != "") {
+    $( "#success_msg" ).show( "slow" );
+  }
+  else{
+
+     return false;
+  };
+  
+});
+</script>
+ 
 </html>

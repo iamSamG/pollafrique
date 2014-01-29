@@ -78,7 +78,7 @@ class MainHandler(Handler):
         phone_number = self.request.get('participate')
         participant = Participant(phone_number = phone_number)
         participant.put()
-        self.render("success.html")
+        self.redirect('/')
 
         # self.redirect("/")
 
